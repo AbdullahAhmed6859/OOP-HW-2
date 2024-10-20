@@ -11,7 +11,7 @@ void testConstruction() {
     BigNum a;
     cout << "Default constructor: "; a.print();
 
-    BigNum b("-0");
+    BigNum b("-");
     cout << "String constructor: "; b.print();
 
     BigNum c(-1);
@@ -25,8 +25,8 @@ void testConstruction() {
 
 void testArithmetic() {
     cout << "Testing Arithmetic Operations:" << endl;
-    BigNum a("7342742443435656502425842");
-    BigNum b("9947239847239");
+    BigNum a("-7342742443435656502425842");
+    BigNum b("-7342742443435656");
 
     cout << "a: "; a.print();
     cout << "b: "; b.print();
@@ -40,11 +40,11 @@ void testArithmetic() {
     BigNum product = a.multiply(b);
     cout << "a * b = "; product.print();
     //
-    // BigNum quotient = a.div(b);
-    // cout << "a / b = "; quotient.print();
-    //
-    // BigNum remainder = a.mod(b);
-    // cout << "a % b = "; remainder.print();
+    BigNum quotient = a.div(b);
+    cout << "a / b = "; quotient.print();
+
+    BigNum remainder = a.mod(b);
+    cout << "a % b = "; remainder.print();
 
     cout << endl;
 }
@@ -81,7 +81,7 @@ void testFileIO() {
 }
 
 int main() {
-    // testConstruction();
+    testConstruction();
     testArithmetic();
     // testComparison();
     // testFileIO();

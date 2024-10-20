@@ -6,6 +6,7 @@
 #include <vector>
 using std::string;
 using std::vector;
+using std::pair;
 
 class BigNum {
     vector<uint8_t> digits;
@@ -62,18 +63,13 @@ private:
     void subMagnitude(const BigNum &bigNum);
     bool isGreaterInMagnitude(const BigNum &bigNum) const;
     bool isLesserInMagnitude(const BigNum &bigNum) const;
+    bool isEqualInMagnitude(const BigNum &bigNum) const;
     static bool isValidNumStr(const string &bigStr);
     void removeLeadingZeros();
     bool isZero() const;
     BigNum absolute() const;
-
     BigNum leftShift() const;
-
-    std::pair<BigNum, BigNum> divAndMod(const BigNum &divisor) const;
-
-    BigNum operator<<(const int right) const;
-
-    BigNum operator>>(int right) const;
+    pair<BigNum, BigNum> divAndMod(const BigNum &divisor) const;
 };
 
 #endif //BIG_NUM_H
