@@ -11,10 +11,10 @@ void testConstruction() {
     BigNum a;
     cout << "Default constructor: "; a.print();
 
-    BigNum b("-1234567890");
+    BigNum b("-0");
     cout << "String constructor: "; b.print();
 
-    BigNum c(98765);
+    BigNum c(-1);
     cout << "Int constructor: "; c.print();
 
     BigNum d(b);
@@ -25,20 +25,20 @@ void testConstruction() {
 
 void testArithmetic() {
     cout << "Testing Arithmetic Operations:" << endl;
-    BigNum a("-1111111111111111111111111");
-    BigNum b("-1111111111111111111111111");
+    BigNum a("7342742443435656502425842");
+    BigNum b("9947239847239");
 
     cout << "a: "; a.print();
     cout << "b: "; b.print();
 
-    BigNum sum = a.add(b);
-    cout << "a + b = "; sum.print();
-
+    // BigNum sum = a.add(b);
+    // cout << "a + b = "; sum.print();
+    //
     // BigNum diff = a.subtract(b);
     // cout << "a - b = "; diff.print();
 
-    // BigNum product = a.multiply(b);
-    // cout << "a * b = "; product.print();
+    BigNum product = a.multiply(b);
+    cout << "a * b = "; product.print();
     //
     // BigNum quotient = a.div(b);
     // cout << "a / b = "; quotient.print();
@@ -51,8 +51,8 @@ void testArithmetic() {
 
 void testComparison() {
     cout << "Testing Comparison Operations:" << endl;
-    BigNum a("1000000000000000000000000");
-    BigNum b("-99999999999999999999999999");
+    BigNum a("100000000000000000000002");
+    BigNum b("100000000000000000000020");
 
     cout << "a: "; a.print();
     cout << "b: "; b.print();
